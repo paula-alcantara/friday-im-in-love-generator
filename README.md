@@ -1,0 +1,1 @@
+# friday-im-in-love-generator
