@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friday I'm in Love Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="./resources/Dice favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <section class="display">
+      <h1 class="display-title">Today's Luck</h1>
+      <input type="text" placeholder="What day is it?" id="input">
+      <p class="weekday hidden"></p>
+      <p class="result hidden"></p>
+    </section>
+    <section class="music-player">
+      <p class="song-title">Friday I'm in Love</p>
+      <p class="artist">The Cure</p>
+      <audio class="song" src="./resources/The Cure - Friday I'm In Love (Audio HQ).mp3" type="audio/mpeg" preload="metadata" >
+      </audio>
+      <input type="range" value="0" class="progress">
+
+      <div class="controls">
+        <div class="btn-backwards btn"><ion-icon name="play-back" class="icon"></ion-icon></div>
+        <div class="btn-play btn"><ion-icon name="play" class="icon" id="icon-play-pause"></ion-icon></div>
+        <div class="btn-foward btn"><ion-icon name="play-forward" class="icon"></ion-icon></div>
+      </div>
+    </section>
+  </div>
+  <button class="btn-reset">Play again!</button>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

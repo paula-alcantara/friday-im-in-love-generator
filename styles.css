@@ -1,0 +1,280 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Light: 300
+Bold: 700
+
+--- 02 COLORS
+
+- Primary: #301f62
+- Tints:
+#d0bfff
+
+- Shades: 
+#090614
+
+- Accents:
+#8d1d1d
+
+- Greys
+
+#fff
+#f8f9fa
+
+
+--- 05 SHADOWS
+
+box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+
+--- 06 BORDER-RADIUS
+
+Small (rounded): 4px
+Medium: 12px
+Rounded: 50%
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+
+/* GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+  width: 100vw;
+  background-attachment: fixed;
+  background-image: linear-gradient(#8d1d1d, #301f62) ;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 60rem;
+  width: 40rem;
+  background-color: #f8f9fa;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  border-radius: 12px;
+  padding: 2.4rem;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 8rem;
+}
+
+
+/* DISPLAY */
+
+.display {
+  background-color: #301f62;
+  color: #fff;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.display h1 {
+  font-size: 3.6rem;
+}
+
+.display input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #d0bfff;
+  font-size: 2.4rem;
+  color: #fff;
+  width: 60%;
+  text-align: center;
+}
+
+.display input::placeholder {
+  color: #d0bfff;
+}
+
+.display input:focus {
+  caret-color: #d0bfff;
+  outline: none;
+}
+
+.display input:focus::placeholder {
+  color: transparent;
+}
+
+.correct {
+  background-color: #8d1d1d;
+
+}
+
+.hidden {
+  display: none;
+}
+
+.weekday {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1.2rem 2.4rem;
+}
+
+.result {
+  font-size: 4.4rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+  padding: 1.2rem 2.4rem;
+}
+
+
+/* MUSIC PLAYER */
+
+.music-player {
+  margin-top: 2.4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.music-player p {
+  color: #090614;
+}
+
+.song-title {
+  font-size: 2rem;
+}
+
+.artist {
+  font-size: 1.6rem;
+  margin-top: 0.8rem;
+}
+
+.progress {
+  -webkit-appearance: none;
+  width: 30rem;
+  height: 0.8rem;
+  background-color: #301f62;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 3.2rem 0;
+}
+
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  background: #301f62;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.btn {
+  background: #301f62;
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.2s;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.btn:active {
+  box-shadow: none;
+}
+
+.icon {
+font-size: 3.2rem;
+}
+
+
+/* RESET BUTTON */
+
+.btn-reset {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color:#090614;
+  background-color: #f8f9fa;
+  padding: 1.2rem 2.4rem;
+  border-radius: 12px;
+  font-family: 'Roboto Mono', monospace;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-reset:active {
+  box-shadow: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 400px) {
+
+  .container {
+    width: 30rem;
+    height: 45rem;
+  }
+
+  .display h1, .result {
+    font-size: 2.4rem;
+  }
+  
+  .display input, .weekday {
+    font-size: 2rem;
+  }
+  
+  .song-title {
+    font-size: 1.6rem;
+  }
+  
+  .artist {
+    font-size: 1.2rem;
+  }
+
+  .progress {
+    width: 25rem;
+  }
+
+  .btn {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .icon {
+    font-size: 2.4rem;
+  }
+}
